@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
+import Section from "./Section";
 
 export default function Examples(){
     const [selectedTopic, setSelectedTopic] = useState()
@@ -23,8 +24,7 @@ export default function Examples(){
   // }
     return(
         <div className='flex justify-center items-center'>
-          <section className='flex flex-col gap-8 justify-start items-start   text-white p-14 max-w-fit'>
-            <h2 className='p-4 text-3xl font-semibold font-[lora]'>Examples</h2>
+          <Section title="Example" className='flex flex-col gap-8 justify-start items-start   text-white p-14 max-w-fit'>
             <menu className='flex flex-row justify-between gap-8 font-[lora]'>
               <TabButton onSelect={() => handleSelect('component')}>Component</TabButton>
               <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
@@ -42,7 +42,7 @@ export default function Examples(){
                 </code>
               </pre>
             </div>)}
-          </section>
+          </Section>
         </div>
     );
 }
