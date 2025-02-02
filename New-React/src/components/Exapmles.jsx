@@ -26,10 +26,10 @@ export default function Examples(){
         <div className='flex justify-center items-center'>
           <Section title="Example" className='flex flex-col gap-8 justify-start items-start   text-white p-14 max-w-fit'>
             <menu className='flex flex-row justify-between gap-8 font-[lora]'>
-              <TabButton onSelect={() => handleSelect('component')}>Component</TabButton>
-              <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-              <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-              <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
+              <TabButton onClick={() => handleSelect('component')}>Component</TabButton>
+              <TabButton onClick={() => handleSelect('jsx')}>JSX</TabButton>
+              <TabButton onClick={() => handleSelect('props')}>Props</TabButton>
+              <TabButton onClick={() => handleSelect('state')}>State</TabButton>
             </menu>
             {/* {tapContent} */}
             {!selectedTopic && <p> Please select a topic</p>}
