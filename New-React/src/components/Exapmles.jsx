@@ -3,7 +3,6 @@ import TabButton from "./TabButton";
 import { EXAMPLES } from "../data";
 import Section from "./Section";
 import Tabs from "./Tabs";
-
 export default function Examples() {
     const [selectedTopic, setSelectedTopic] = useState()
 
@@ -34,9 +33,7 @@ export default function Examples() {
                         <TabButton onClick={() => handleSelect('state')}>State</TabButton>
                     </>
                 }>
-                    <div className='flex flex-col w-dvh gap-4 p-8 bg-[#2f2733] rounded-[6px] shadow-[0_2px_8px_rgba(0,0,0,0.4)'>
-                        {tapContent}
-                    </div>
+                    {tapContent}
                 </Tabs>
             </Section>
         </div>
