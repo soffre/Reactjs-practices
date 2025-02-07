@@ -25,7 +25,8 @@ export default function Examples() {
     return (
         <div className='flex justify-center items-center'>
             <Section title="Example" className='flex flex-col gap-8 justify-start items-start   text-white p-14 max-w-fit'>
-                <Tabs buttons={
+                <Tabs 
+                buttons={
                     <>
                         <TabButton onClick={() => handleSelect('component')}>Component</TabButton>
                         <TabButton onClick={() => handleSelect('jsx')}>JSX</TabButton>
