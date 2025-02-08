@@ -35,6 +35,7 @@ for (const turn of turns){
                         key={`${rowIndex}-${colIndex}`}
                         onClick={() => onSelectSquare(rowIndex, colIndex)}
                         className="bg-[#4e4c4c] w-24 h-24 text-6xl font-[lora] font-bold flex items-center justify-center mt-2"
+                       disabled={playerSymbol !== null}
                     >
                         {playerSymbol}
                     </button>
