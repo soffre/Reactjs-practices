@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+
+@layer{
+  body{
+   @apply bg-[#b77710]
+  }
+  header{
+    @apply flex flex-col justify-center items-center
+  }
+  header h1{
+    @apply font-[lora] font-bold text-4xl
+  }
+
+}
