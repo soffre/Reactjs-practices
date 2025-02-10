@@ -26,7 +26,7 @@ function App() {
 
   const activePlayer = deriveActivePlayer(gameTurns)
 
-  let gameBoard = initialGameBoard
+  let gameBoard = [...initialGameBoard.map((array) => [...array])]
 
   for (const turn of gameTurns) {
     const { square, player } = turn;
@@ -67,6 +67,10 @@ function App() {
       })
     }
 
+
+    function handleRestart(){
+      setGameTurns([]);
+    }
     return (
       <>
         <main className='flex flex-col justify-center items-center mt-8'>
@@ -76,7 +80,7 @@ function App() {
               <Player initialName="player 2" symbol="O" isActive={activePlayer === 'O'} />
             </ol>
 
-            {winner && <GameOver winner={winner}/>}
+            {winner && <GameOver winner={winner} onRestart={handleRestart}/>}
             <GameBoard onSelectSquare={handleOnSelectSquare} board={gameBoard} />
           </div>
 
